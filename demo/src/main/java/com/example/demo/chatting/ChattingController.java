@@ -17,6 +17,6 @@ public class ChattingController {
 		String sessionVal = session.getId();
 		model.addAttribute("sessionVal", sessionVal);
 		
-		return "/ui/index";
+		return "ui/index";
 	}
 }
