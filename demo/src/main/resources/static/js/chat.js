@@ -20,7 +20,7 @@ $(document).ready(function(){
 	var num = 0;
     const websocket = new WebSocket("ws://localhost:8090/ws/chat");
 	
-    /*websocket.onopen = function() {
+    websocket.onopen = function() {
         var t = setInterval(function(){
             if (ws.readyState != 1) {
                 clearInterval(t);
@@ -28,7 +28,7 @@ $(document).ready(function(){
             }
             ws.send('{type:"ping"}');
         }, 55000);
-    }*/
+    }
 
     websocket.onmessage = onMessage;
     websocket.onopen = onOpen;
