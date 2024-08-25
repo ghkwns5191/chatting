@@ -18,7 +18,7 @@ $(document).ready(function(){
         
     });
 	var num = 0;
-    const websocket = new WebSocket("ws://localhost:8090/ws/chat");
+    const websocket = new WebSocket("ws://3.39.130.67:8090/ws/chat");
 	
     websocket.onopen = function() {
         var t = setInterval(function(){
