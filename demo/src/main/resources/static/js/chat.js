@@ -69,19 +69,19 @@ $(document).ready(function(){
         var message = null;
         var arr = data.split(":");
 
-        for(var i=0; i<arr.length; i++){
-            console.log('arr[' + i + ']: ' + arr[i]);
-        }
+        // for(var i=0; i<arr.length; i++){
+        //     console.log('arr[' + i + ']: ' + arr[i]);
+        // }
 
         var cur_session = sessionVal;
 
         //현재 세션에 로그인 한 사람
-        console.log("cur_session : " + cur_session);
+        // console.log("cur_session : " + cur_session);
         sessionId = arr[1].substring(arr[1].lastIndexOf("..") + 2, arr[1].length);
         message = arr[1].substring(0, arr[1].lastIndexOf(".."));
 
-        console.log("sessionID : " + sessionId);
-        console.log("cur_session : " + cur_session);
+        // console.log("sessionID : " + sessionId);
+        // console.log("cur_session : " + cur_session);
 
         //로그인 한 클라이언트와 타 클라이언트를 분류하기 위함
         if(sessionId == cur_session){
