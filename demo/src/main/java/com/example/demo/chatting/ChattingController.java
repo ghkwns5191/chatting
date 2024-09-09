@@ -1,5 +1,8 @@
 package com.example.demo.chatting;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,8 +24,8 @@ public class ChattingController {
 		String sessionVal = session.getId();
 		model.addAttribute("sessionVal", sessionVal);
 		
-		
-		this.chattingService.getDialogs();
+		Map<String, Object> datas = new HashMap<>();
+//		datas = this.chattingService.getDialogs();
 		
 		return "ui/index";
 	}

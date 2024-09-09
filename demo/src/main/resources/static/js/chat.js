@@ -18,7 +18,7 @@ $(document).ready(function(){
         
     });
 	var num = 0;
-    const websocket = new WebSocket("ws://13.209.179.104:8090/ws/chat");
+    const websocket = new WebSocket("ws://localhost:8090/ws/chat");
 	
     /*websocket.onopen = function() {
         var t = setInterval(function(){
@@ -56,6 +56,15 @@ $(document).ready(function(){
     //채팅창에 들어왔을 때
     function onOpen(evt) {
         /*var str = username + ": 님이 입장하셨습니다.";*/
+
+        var t = setInterval(function(){
+            if (ws.readyState != 1) {
+                clearInterval(t);
+                return;
+            }
+            ws.send('{type:"ping"}');
+        }, 55000);
+        
     }
 
     function onMessage(msg) {
