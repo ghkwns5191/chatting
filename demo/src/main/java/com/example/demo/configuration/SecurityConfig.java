@@ -26,7 +26,9 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests((auth)->auth.requestMatchers("/"
                 													, "/login"
-                													, "/ws/chat").permitAll()
+                													, "/ws/chat"
+                													, "/room"
+                													, "/chatting").permitAll()
                 
                 
                 		);

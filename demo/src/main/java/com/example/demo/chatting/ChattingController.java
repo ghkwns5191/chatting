@@ -27,6 +27,45 @@ public class ChattingController {
 		Map<String, Object> datas = new HashMap<>();
 //		datas = this.chattingService.getDialogs();
 		
+		return "ui/login";
+	}
+	
+	
+	@RequestMapping("/chatting")
+	public String chatting(HttpServletRequest request, HttpServletResponse response, Model model) {
+		HttpSession session = request.getSession();
+		String sessionVal = session.getId();
+		model.addAttribute("sessionVal", sessionVal);
+		
+		Map<String, Object> datas = new HashMap<>();
+//		datas = this.chattingService.getDialogs();
+		
+		return "ui/login";
+	}
+	
+	
+	@RequestMapping("/login")
+	public String login(HttpServletRequest request, HttpServletResponse response, Model model) {
+		HttpSession session = request.getSession();
+		String sessionVal = session.getId();
+		model.addAttribute("sessionVal", sessionVal);
+		
+		Map<String, Object> datas = new HashMap<>();
+//		datas = this.chattingService.getDialogs();
+		
+		return "ui/login";
+	}
+	
+	
+	@RequestMapping("/room")
+	public String room(HttpServletRequest request, HttpServletResponse response, Model model) {
+		HttpSession session = request.getSession();
+		String sessionVal = session.getId();
+		model.addAttribute("sessionVal", sessionVal);
+		
+		Map<String, Object> datas = new HashMap<>();
+//		datas = this.chattingService.getDialogs();
+		
 		return "ui/index";
 	}
 }
