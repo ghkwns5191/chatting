@@ -37,8 +37,8 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'mysql:mysql-connector-java:8.0.33'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
 	compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+	implementation group: 'org.bgee.log4jdbc-log4j2', name: 'log4jdbc-log4j2-jdbc4.1', version: '1.16'
 }
 
 tasks.named('test') {
